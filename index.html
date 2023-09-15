@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <title>Justificativas de falta</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    
+    <div class="caixa__formulario">
+        <form class="formulario"  
+        action="https://api.sheetmonkey.io/form/t5G32DPYddanXYzN5JVX7h" method="post">
+            
+            <h1 class="formulario__titulo">JUSTIFICATIVAS DE FALTA</h1>
+            <div>
+                <label for="aluno">Aluno</label>
+                <input size="50"  type="name" placeholder="Digite o nome do aluno" 
+                    name="Nome do Aluno" id="nomeAluno" required>
+            </div>
+            <div >
+                <label  for="anoAluno">Ano</label>
+
+                <select  class="formulario__select"  name="Ano " id="anoAluno">
+                    <option value = "6">6º ano</option>
+                    <option value = "7">7º ano</option>
+                    <option value = "8">8º ano</option>
+                    <option value = "9">9º ano</option>
+
+                    </select>
+            </div>
+            <div>
+                <label  for="turmaAluno">Turma</label>
+                <select class="formulario__select"  name="Turma" id="turmaAluno">
+                    <option value = "A">A</option>
+                    <option value = "B">B</option>
+                    <option value = "C">C</option>
+                    <option value = "D">D</option>
+                    <option value = "E">E</option>
+                    <option value = "F">F</option>
+                    <option value = "APC">Aprender é o Caminho</option>
+                </select>
+
+            </div>
+            <div>
+                <label  for="dataAtestado">Data do afastamento</label>
+                <input size="80" type="date" placeholder="Quando o atestado foi emitido?"
+                    name="Data do Atestado" id="dataAtestado" required>
+            </div>
+            <div>
+                <label  for="duraçãoAtestado"">Dias de afastamento</label>
+                <input size="80" type="number" placeholder="Quantos dias serão de afastamento?"
+                    name="Dias de Atestado" id="validadeAtestado" required>
+            </div>
+            <div >
+                    <label  for="motivoFalta">Justificativa e comentários</label>
+                    <textarea class="formulario__justificativa"size="50"type="name"placeholder="Escreva a justificativa da falta ou outras informações relevantes..."name="Justificativa e Observações" id="motivoFalta" required></textarea>
+            </div>
+
+            <div>
+                <label for="responsavel_registro">Responsável pelo Registro</label>
+                <input size="50"  type="name" placeholder="Quem está lançando esta falta?" 
+                    name="Registrado por:" id="responsavelRegistro" required>
+            </div>
+            
+        
+            <div class="posicao__botao">
+                <button class="button" type="submit">
+                Enviar
+                </button>
+             </div>  
+
+           
+        </form>
+    </div>
+
+    <script src="./script.js"> </script>
+</body>
+
+</html>

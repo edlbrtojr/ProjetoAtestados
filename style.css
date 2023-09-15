@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nanum+Gothic+Coding&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+input,
+label,
+textarea{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 80%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 1%; 
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+
+}
+
+label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input{
+    height: 50px;
+    border-radius: 10px;
+    background: rgba(109, 146, 233, 0.542);
+
+}
+
+textarea{height: 50px;
+    border-radius: 10px;
+    background: rgba(109, 146, 233, 0.542);
+
+}
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(./assets/paper_texture.jpg);
+        box-sizing: border-box;
+        height: 100vh;
+
+
+    }
+
+    ::placeholder{
+        color: rgba(73, 62, 62, 0.749);
+        justify-content: center;
+        align-items: center ;
+    }   
+
+
+
+    form{
+
+        background: rgba(10, 122, 250, 0.223);
+        border-radius: 8px;
+        padding: 15px;
+        box-sizing: border-box;
+
+    
+    }  
+
+    .caixa__formulario{
+        width: 40%;
+        color: rgb(11, 30, 46);
+        font-family: 'Monterrat', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-items: center;
+        align-items: center;
+
+    
+
+
+    }
+
+    .formulario__titulo{
+        font-family:  'Nanum Gothic Coding', monospace;
+        justify-content: center;
+    }
+
+    .formulario__select{
+        height: 10%;
+        width: 100%;
+        border-radius: 10px;
+        background: rgba(109, 146, 233, 0.542);
+        color: rgb(82, 79, 79) ;
+        padding:  3% 2%;
+    }
+
+    .button{
+        width: 100%;
+        border-radius: 10px;
+        margin: 1%; 
+        background: rgb(109, 146, 233);
+    }
+    
+    .posicao__botao{
+        justify-items: center;
+
+    }
+
+
+
+    
+
+
+
