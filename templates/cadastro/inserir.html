@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <link rel="stylesheet" href="{% static '/styles/style.css' %}">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="{% url 'inicio' %}"> Início </a>
+            <a class="cabecalho__menu__link" href="{% url 'inserir' %}"> Inserir </a>
+            <a class="cabecalho__menu__link" href="{% url 'visualizar' %}"> Visualizar </a>
+        </nav>
+    </header>
+
+    <main>
+
+        <form class="form">
+        {% csrf_token %}
+            <h1 class="cabecalho__menu__link">JUSTIFICATIVAS DE FALTA</h1>
+        
+            <div>
+                {% for field in form.visible_fields %}
+                <div>
+ 
+                    <label class="apresentacao__conteudo__texto" for="{{ field.id_for_label }}">{{field.label}}</label>
+                    {{field}}
+                </div>
+                {% endfor %}
+            </div>
+
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+
+        </form>
+    </main>
+</body>
+</html>
