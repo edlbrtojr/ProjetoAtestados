@@ -26,12 +26,20 @@ class InserirForm(forms.Form):
         label="Data do Afastamento"
     )
 
-    dias_afastados=forms.NumberInput()
+    dias_afastados=forms.CharField(
+        label= "Dias de Afastamento",
+        widget=forms.NumberInput()
+        )
 
     justificativa=forms.CharField(
         widget=forms.Textarea,
         required=True,
         label="Justificativa e Comentários"
+    )
+
+    anexos=forms.ImageField(
+        widget=forms.FileInput(),
+        label="Anexo(s)"
     )
 
     # Fazer o Responsável pelo registro
