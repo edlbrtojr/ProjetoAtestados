@@ -125,11 +125,13 @@ STATIC_URL = 'static/'
 
 # TODOS OS ARQUIVOS ESTÁTICOS ESTÃO NESTA PASTA
 STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'setup/static'),
     os.path.join(BASE_DIR, 'mobile/static'),
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+if not DEBUG:
+    STATIC_ROOT = 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
