@@ -1,4 +1,4 @@
-from django import  forms
+from django import forms
 
 class InserirForm(forms.Form):
     choices_ano = (('6', '6º ano'), ('7', '7º ano'), ('8', '8º ano'), ('9', '9º ano'))
@@ -26,9 +26,8 @@ class InserirForm(forms.Form):
         label="Data do Afastamento"
     )
 
-    dias_afastados=forms.CharField(
-        label= "Dias de Afastamento",
-        widget=forms.NumberInput()
+    dias_afastados=forms.NumberInput(
+
         )
 
     justificativa=forms.CharField(

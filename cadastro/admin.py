@@ -1,3 +1,4 @@
 from django.contrib import admin
+from cadastro.models import InserirFalta
 
-# Register your models here.
+admin.site.register(InserirFalta)
