@@ -4,6 +4,7 @@ class InserirForm(forms.Form):
     choices_ano = (('6', '6º ano'), ('7', '7º ano'), ('8', '8º ano'), ('9', '9º ano'))
     choices_turma = (('A', 'A'), ('B', 'B'), ('C', 'C'), ('D', 'D'),
                      ('E', 'E'), ('F', 'F'), ('APC', 'Aprender é o caminho'))
+    
     nome_aluno=forms.CharField(
         label="Nome do Aluno",
         max_length=100,
@@ -23,11 +24,12 @@ class InserirForm(forms.Form):
 
     data_afastamento=forms.DateField(
         required=True,
-        label="Data do Afastamento"
+        label="Data do Afastamento",
+        widget= forms.SelectDateWidget
     )
 
-    dias_afastados=forms.NumberInput(
-
+    dias_afastados=forms.IntegerField(
+        label= "Dias de Afastamento"
         )
 
     justificativa=forms.CharField(

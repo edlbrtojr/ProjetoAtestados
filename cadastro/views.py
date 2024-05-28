@@ -3,12 +3,11 @@ from cadastro.forms import InserirForm
 from django.shortcuts import redirect
 
 def inserir(request):
-    if request.POST:
-        form = InserirForm(request.POST, request.FILES)
-        print(request.FILES)
+    if request.method == 'POST':
+        form = InserirForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect(inicio)
+    
     
     return render(request, 'cadastro/inserir.html', {"form": InserirForm})
 
